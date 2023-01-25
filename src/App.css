@@ -1,38 +1,146 @@
-.App {
+*{
+  margin: 0;
+}
+
+.todo__background{
+  background: radial-gradient(circle, rgba(112,89,159,1) 0%, rgba(115,115,177,1) 35%, rgba(23,0,10,1) 100%);
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.todo__title{
+  color: aliceblue;
+  text-align: center;
+  padding: 4rem 4rem;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 85px;
+  letter-spacing: 0.09rem;
+}
+
+.todo__container{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  height: 60vh;
+  background-color: rgb(204, 228, 249);
+  width: 50%;
+  border: 1px solid white;
+  border-radius: 50px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 25px;
+}
+
+.todo__container input{
+  font-size: 25px;
+  margin-left: 10px;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.todo__task-list{
+  width: 580px;
+  margin-top: 4rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.todo__task-container{
+  display: flex;
+  flex-direction: row;
+  width: 540px;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(51,129,255,1) 0%, rgba(65,108,145,1) 59%, rgba(6,0,79,1) 100%);;
+  margin-top: 1rem;
+  padding: 0.1rem 1rem;
+  border-radius: 10px;
+  color: aliceblue;
+  letter-spacing: 0.04em;
+  align-items: center;
+}
+
+.todo__btn-submit{
+  border-radius: 10px;
+  border: 1px solid rgb(64, 147, 220);
+  font-size: 18px;
+  background-color: white;
+  margin-top: 1rem;
+  padding: 0.3em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo__btn-submit:hover{
+   background-color: rgb(64, 147, 220);
+    transform: scale(1.1);
+    color: azure;
+    border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo__form{
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo__trash{
+  color: rgb(241, 78, 111);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todo__input{
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 1050px){
+  .todo__task-container{
+    max-width: 60%;
+    margin: 0 80px
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+@media screen and (max-width: 550px){
+  .todo__container{
+    height: 300px;
+  }
+  .todo__title{
+    font-size: 30px;
+    padding-bottom: none;
+  }
+  .todo__form{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  .todo__input{
+    max-width: 100px;
+  }
+  .todo__btn-submit{
+    font-size: 14px;
+  }
+  .todo__task-container{
+    font-size:13px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 0.5em;
+    
+  }
+  .todo__task-list{
+    width: 380px;
+    margin-top: 1rem;
   }
 }
